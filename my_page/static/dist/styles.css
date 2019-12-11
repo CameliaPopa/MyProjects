@@ -1,5 +1,348 @@
-/*test*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap);
+/* Imports */
+/* Normalize */
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+/* Variables */
+/* Colors */
 body {
-  background: red;
-  background-image: url(images/d7f11365711f32930e2031bf9fa900c9.png);
+  background: #FFFFFF;
+}
+
+.wrapper {
+  background: #FFFFFF;
+}
+
+nav {
+  background: #576F9B;
+}
+nav ul li a {
+  color: #FFFFFF;
+}
+nav ul li a:hover {
+  background-color: #5E78A6;
+}
+
+.bar {
+  background: #FFFFFF;
+}
+.bar .company-name {
+  color: #576F9B;
+}
+.bar .search input {
+  background: #DFE2EB;
+}
+.bar .search input:hover {
+  background: #E6E9F2;
+}
+.bar .search button {
+  background: #DFE2EB;
+  color: #576F9B;
+}
+.bar .search button:hover {
+  background: #E6E9F2;
+}
+
+.carousel .slide .carousel-text {
+  color: #54535D;
+}
+.carousel .slide .carousel-text p {
+  color: #FFFFFF;
+}
+.carousel .prev {
+  color: #FFFFFF;
+}
+.carousel .next {
+  color: #FFFFFF;
+}
+.carousel .triangle-container .triangle {
+  border-color: transparent #54535D;
+}
+
+.creative {
+  background: #FFFFFF;
+}
+.creative h1, .creative p {
+  color: #576F9B;
+}
+
+.about-us {
+  background: #E6F8FC;
+}
+.about-us .about-title #about {
+  color: #576F9B;
+}
+.about-us .about-title #ipsum {
+  background: #90D4F1;
+  color: #576F9B;
+}
+.about-us .text {
+  color: #576F9B;
+}
+.about-us .button {
+  background-color: #C8DBE9;
+  border-color: #99ACC3;
+}
+.about-us .about-icons {
+  background-color: #FFFFFF;
+}
+.about-us .about-box {
+  color: #75747D;
+}
+
+.galery {
+  background: #576F9B;
+}
+.galery .vertical-divider .item {
+  color: #FFFFFF;
+}
+.galery .vertical-divider .divider {
+  background: #FFFFFF;
+}
+.galery .blocks #block-one {
+  background: #576F9B;
+  color: #FFFFFF;
+}
+.galery .blocks #block-two {
+  background: #439999;
+}
+.galery .blocks #block-three {
+  background: #B3C7C7;
+}
+.galery .blocks hr {
+  color: #FFFFFF;
+}
+
+.blocks-creative {
+  background: #FFFFFF;
+}
+.blocks-creative .grid-creative {
+  color: #576F9B;
+}
+.blocks-creative #vertical-line {
+  color: #576F9B;
+}
+
+.contact {
+  background-color: #E6F8FC;
+}
+.contact .contact-one {
+  color: #576F9B;
+}
+.contact .contact-one .form .title .item {
+  color: #576F9B;
+}
+.contact .contact-one .form .title .divider-contact {
+  background: #576F9B;
+}
+.contact .contact-one .form #first_name, .contact .contact-one .form #email, .contact .contact-one .form #msg {
+  color: #576F9B;
+}
+.contact .contact-one .form #btn {
+  background: #576F9B;
+  color: #FFFFFF;
+}
+.contact .contact-two {
+  color: #576F9B;
+}
+
+.footer-boxes {
+  background-color: #FFFFFF;
+}
+.footer-boxes .footer-box {
+  color: #576F9B;
+}
+.footer-boxes .footer-box .circle i {
+  color: #FFFFFF;
+}
+.footer-boxes .footer-box #circle1 {
+  background: #27A7C3;
+}
+.footer-boxes .footer-box #circle2 {
+  background: #709CD2;
+}
+.footer-boxes .footer-box #circle3 {
+  background: #5BBECE;
+}
+.footer-boxes .footer-box #circle4 {
+  background: #6C97B8;
+}
+
+.container-box #box-1 {
+  background-color: #8CD1EE;
+}
+.container-box #box-2 {
+  background-color: #9FB8C1;
+}
+.container-box #box-3 {
+  background-color: #699AA9;
+}
+.container-box #box-4 {
+  background-color: #B1C4EE;
+}
+.container-box #box-5 {
+  background-color: #918DAB;
+}
+
+.footer {
+  background: #576F9B;
+}
+.footer ul li a {
+  color: #FFFFFF;
+}
+.footer ul li a:hover {
+  background-color: #5E78A6;
+}
+.footer #hr-footer {
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+  nav .navbar-toggle {
+    color: #FFFFFF;
+  }
+}
+/* Topography */
+nav ul {
+  list-style-type: none;
+}
+nav ul li a {
+  text-decoration: none;
+  text-align: center;
+}
+
+.bar {
+  align-items: center;
+}
+.bar .company-name {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.bar .search input {
+  font-size: 1.1em;
+}
+
+.carousel {
+  align-items: center;
+}
+.carousel .slide .carousel-text {
+  text-align: center;
+}
+.carousel .slide .carousel-text p {
+  font-size: 2rem;
+}
+.carousel .triangle-container {
+  justify-content: center;
+}
+.carousel .triangle-container .triangle {
+  text-align: center;
+  cursor: pointer;
+}
+
+.creative {
+  align-items: center;
+}
+.creative h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+.creative p {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.about-us {
+  align-items: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.about-us .about-title {
+  list-style-type: none;
+}
+.about-us .about-title #about {
+  text-decoration: none;
+  font-size: 30px;
+}
+.about-us .about-title #ipsum {
+  text-decoration: none;
+  font-size: 13px;
+}
+.about-us .text {
+  text-align: left;
+  font-size: 1rem;
+}
+.about-us .about-icons {
+  justify-content: space-around;
+  align-content: flex-start;
+}
+.about-us .about-icons .about-box {
+  list-style-type: none;
+  text-align: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.about-us .about-icons .about-box .title {
+  font-size: 20px;
+  text-align: center;
+}
+.about-us .about-icons .about-box .content {
+  text-align: center;
+  font-size: 15px;
+}
+
+.galery .vertical-divider .item #title-gallery {
+  font-size: 2rem;
+}
+.galery .vertical-divider .item #text-gallery {
+  font-size: 1em;
+}
+.galery .blocks {
+  justify-content: space-between;
+}
+.galery .blocks #block-one {
+  text-align: justify;
+}
+
+.blocks-creative {
+  justify-content: space-between;
+}
+.blocks-creative .grid-creative #creative-left {
+  font-size: 2rem;
+}
+.blocks-creative .grid-creative #creative-center, .blocks-creative .grid-creative #creative-right {
+  text-align: justify;
+}
+
+.contact .contact-one {
+  text-align: center;
+}
+.contact .contact-one .form {
+  text-align: left;
+}
+.contact .contact-one .form .title .item #title-contact {
+  font-size: 2rem;
+}
+.contact .contact-one .form .title .item #text-contact {
+  font-size: 1em;
+}
+.contact .contact-one .form #btn {
+  font-size: 1em;
+  text-align: center;
+  cursor: pointer;
+}
+.contact .contact-two {
+  text-align: left;
+}
+.contact .contact-two span {
+  font-size: 24px;
+}
+.contact .contact-two #content {
+  font-size: 1em;
+}
+.contact .contact-two #phone {
+  font-size: 1.8em;
 }

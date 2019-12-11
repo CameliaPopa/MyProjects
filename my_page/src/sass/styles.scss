@@ -1,5 +1,417 @@
-/*test*/
+/* Imports */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+
+/* Normalize */
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+/* Variables */
+$color-background: #FFFFFF;
+$color-primary: #576F9B;
+$color-primary-hover: #5E78A6;
+$color-secundary: #E6F8FC;
+$color-search: #DFE2EB;
+$color-search-hover: #E6E9F2;
+$color-carousel: #54535D;
+
+/* Colors */
 body {
-  background: red;
-  background-image: url('../images/about.png');
+    background: $color-background;
+}
+
+.wrapper {
+    background: $color-background;
+}
+
+nav {
+    background: $color-primary;
+    ul{
+        li {
+            a{
+                color: $color-background;
+                &:hover {
+                    background-color: $color-primary-hover;
+                }
+            }
+        }
+    }
+}
+
+.bar {
+    background: $color-background;
+    .company-name {
+        color: $color-primary;
+    }
+    .search {
+        input {
+            background: $color-search;
+            &:hover {
+                background: $color-search-hover;
+            }
+        }
+        button {
+            background: $color-search;
+            color: $color-primary;
+            &:hover {
+                background: $color-search-hover;
+            }
+        }
+    }
+}
+
+.carousel {
+    .slide {
+        .carousel-text {
+            color: $color-carousel;
+            p {
+                color: $color-background;
+            }
+        }
+    }
+    .prev {
+        color: $color-background;
+    }
+    .next {
+        color: $color-background;
+    }
+    .triangle-container {
+        .triangle {
+            border-color: transparent $color-carousel;
+        }
+    }
+}
+
+.creative {
+    background: $color-background;
+    h1, p {
+        color: $color-primary;
+    }
+}
+
+.about-us {
+    background: $color-secundary;
+    .about-title {
+        #about {
+            color: $color-primary;
+        }
+        #ipsum {
+            background: #90D4F1;
+            color: $color-primary;
+        }
+    }
+    .text {
+        color: $color-primary;
+    }
+    .button {
+        background-color: #C8DBE9;
+        border-color: #99ACC3;
+    }
+    .about-icons {
+        background-color: $color-background;
+    }
+        .about-box {
+            color: #75747D;
+        }
+}
+
+.galery {
+    background: $color-primary;
+    .vertical-divider {
+        .item {
+            color: $color-background;
+        }
+        .divider {
+            background: $color-background;
+        }
+    }
+    .blocks {
+        #block-one {
+            background: $color-primary;
+            color: $color-background;
+        }
+        #block-two {
+            background: #439999;
+        }
+        #block-three {
+            background: #B3C7C7;
+        }
+        hr {
+            color: $color-background;
+        }
+    }
+}
+
+.blocks-creative {
+    background: $color-background;
+    .grid-creative {
+        color: $color-primary;
+    }
+    #vertical-line {
+        color: $color-primary;
+    }
+}
+
+.contact {
+    background-color: $color-secundary;
+    .contact-one {
+        color: $color-primary;
+        .form {
+            .title {
+                .item {
+                    color: $color-primary;
+                }
+                .divider-contact {
+                    background: $color-primary;
+                }
+            }
+            #first_name, #email, #msg {
+                color: $color-primary;
+            }
+            #btn {
+                background: $color-primary;
+                color: $color-background;
+            }
+        }
+    }
+    .contact-two {
+        color: $color-primary;
+    }
+}
+
+.footer-boxes {
+    background-color: $color-background;
+    .footer-box {
+        color: $color-primary;
+        .circle {
+            i {
+                color: $color-background;
+            }
+        }
+        #circle1 {
+            background:  #27A7C3;
+
+        }
+        #circle2 {
+            background:  #709CD2;
+
+        }
+        #circle3 {
+            background:  #5BBECE;
+
+        }
+        #circle4 {
+            background:  #6C97B8;
+        }
+    }
+}
+
+.container-box {
+    #box-1 {
+        background-color: #8CD1EE;
+    }
+    #box-2 {
+        background-color: #9FB8C1;
+    }
+    #box-3 {
+        background-color: #699AA9;
+    }
+    #box-4 {
+        background-color: #B1C4EE;
+    }
+    #box-5 {
+        background-color: #918DAB;
+    }
+}
+
+.footer {
+    background: $color-primary;
+    ul {
+        li {
+            a {
+                color: $color-background;
+                &:hover {
+                    background-color: $color-primary-hover;
+                }
+            }
+        }
+    }
+    #hr-footer {
+        color: $color-background;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        .navbar-toggle {
+            color: $color-background;
+        }
+    }
+}
+
+/* Topography */
+nav {
+    ul{
+        list-style-type: none;
+        li {
+            a{
+                text-decoration: none;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.bar {
+    align-items: center;
+    .company-name {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .search {
+        input {
+            font-size: 1.1em;
+        }
+    }
+}
+
+.carousel {
+    align-items: center;
+    .slide {
+        .carousel-text {
+            text-align: center;
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+    .triangle-container {
+        justify-content: center;
+        .triangle {
+            text-align: center;
+            cursor: pointer;
+
+        }
+    }
+}
+
+.creative {
+    align-items: center;
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+    }
+    p {
+        text-align: center;
+        font-size: 1rem;
+    }
+}
+
+.about-us {
+    align-items: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    .about-title {
+        list-style-type: none;
+        #about {
+            text-decoration: none;
+            font-size: 30px;
+        }
+        #ipsum {
+            text-decoration: none;
+            font-size: 13px;
+        }
+    }
+    .text {
+        text-align: left;
+        font-size: 1rem;
+
+    }
+    .about-icons {
+        justify-content: space-around;
+        align-content: flex-start;
+        .about-box {
+            list-style-type: none;
+            text-align: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            .title {
+                font-size: 20px;
+                text-align: center;
+            }
+            .content {
+                text-align: center;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.galery {
+    .vertical-divider {
+        .item {
+            #title-gallery {
+                font-size:2rem;
+            }
+            #text-gallery {
+                font-size: 1em;
+            }
+        }
+    }
+    .blocks {
+        justify-content: space-between;
+        #block-one {
+            text-align: justify;
+        }
+    }
+}
+
+.blocks-creative {
+    justify-content: space-between;
+    .grid-creative {
+        #creative-left {
+            font-size: 2rem;
+        }
+        #creative-center, #creative-right {
+            text-align: justify;
+        }
+    }
+}
+
+.contact {
+    .contact-one {
+        text-align: center;
+        .form {
+            text-align:left;
+            .title {
+                .item {
+                    #title-contact {
+                        font-size:2rem;
+                    }
+                    #text-contact {
+                        font-size: 1em;
+                    }
+                }
+            }
+            #btn {
+                font-size: 1em;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+    }
+    .contact-two {
+        text-align: left;
+        span {
+            font-size: 24px;
+        }
+        #content {
+            font-size: 1em;
+        }
+        #phone {
+            font-size: 1.8em;
+        }
+    }
 }
