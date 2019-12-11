@@ -346,3 +346,60 @@ nav ul li a {
 .contact .contact-two #phone {
   font-size: 1.8em;
 }
+
+.footer-boxes {
+  justify-content: space-around;
+  align-content: flex-start;
+}
+.footer-boxes .footer-box .circle {
+  justify-content: center;
+  text-align: center;
+}
+.footer-boxes .footer-box .circle i {
+  font-size: 45px;
+}
+.footer-boxes .footer-box .title {
+  font-size: 20px;
+}
+.footer-boxes .footer-box .content {
+  text-align: center;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+.footer ul li a {
+  text-decoration: none;
+  text-align: center;
+}
+.footer #hr-footer {
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav ul .main-nav {
+    list-style-type: none;
+  }
+}
+/* ABSTRACTS */
+/* Colors */
+/* Variables */
+/* Mixins */
+/* Placeholder */
+/* BASE */
+/* Normalize */
+/* Typography margin/padding/float/align/justify-content/font/list-style-type/text-decoration/width/flex-direction/*/
+/* COMPONENTS */
+/* Buttons */
+/* Carousel */
+/* LAYOUT */
+/* navigation global*/
+/* grid */
+/* header */
+/* footer */
+/* forms */

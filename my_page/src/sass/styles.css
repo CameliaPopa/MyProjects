@@ -441,8 +441,6 @@ hr {
     display: flex;
     padding-top: 70px;
     padding-bottom: 50px;
-    justify-content: space-around;
-    align-content: flex-start;
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
     border: none;
@@ -455,25 +453,22 @@ hr {
 
 .footer-boxes .footer-box .circle {
     border-radius: 100%;
-    justify-content: center;
-    text-align: center;
     height: 100px;
     width: 100px;
 }
 
 .footer-boxes .footer-box .circle i {
-    font-size: 45px;
     margin: 0.5em;
 }
 
 .footer-boxes .footer-box .title {
     width: 100%;
-    font-size: 20px;
+
     margin: 10px 0px;
 }
 
 .footer-boxes .footer-box .content {
-    text-align: center;
+
     margin-left: -35px;
 }
 
@@ -496,12 +491,9 @@ hr {
 
 footer ul {
     display: flex;
-    list-style-type: none;
     padding: 0;
 }
 footer a {
-    text-decoration: none;
-    text-align: center;
     display: block;
     padding: 10px;
 }
@@ -541,7 +533,7 @@ nav li {
 .contact {
     display:flex;
     flex-wrap:wrap;
-    justify-content: space-between;
+
 }
 .gridcontact {
     flex: 1 1 32%;
@@ -567,7 +559,7 @@ nav li {
 }
 
 .main-nav {
-    list-style-type: none;
+
     display: none;
 }
 

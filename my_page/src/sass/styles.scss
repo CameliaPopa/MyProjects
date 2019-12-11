@@ -191,15 +191,12 @@ nav {
         }
         #circle1 {
             background:  #27A7C3;
-
         }
         #circle2 {
             background:  #709CD2;
-
         }
         #circle3 {
             background:  #5BBECE;
-
         }
         #circle4 {
             background:  #6C97B8;
@@ -415,3 +412,87 @@ nav {
         }
     }
 }
+
+.footer-boxes {
+    justify-content: space-around;
+    align-content: flex-start;
+    .footer-box {
+        .circle {
+            justify-content: center;
+            text-align: center;
+            i {
+                font-size: 45px;
+            }
+        }
+        .title {
+            font-size: 20px;
+        }
+        .content {
+            text-align: center;
+        }
+    }
+}
+
+.footer {
+    ul {
+        list-style-type: none;
+        li {
+            a {
+                text-decoration: none;
+                text-align: center;
+            }
+        }
+    }
+    #hr-footer {
+        color: $color-background;
+    }
+}
+
+@media screen and (min-width: 768px) {
+.contact {
+    justify-content: space-between;
+}
+}
+
+@media screen and (max-width: 768px) {
+nav {
+    ul{
+        .main-nav{
+            list-style-type: none;
+        }
+    }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ABSTRACTS */
+/* Colors */
+/* Variables */
+/* Mixins */
+/* Placeholder */
+
+/* BASE */
+/* Normalize */
+/* Typography margin/padding/float/align/justify-content/font/list-style-type/text-decoration/width/flex-direction/*/
+
+/* COMPONENTS */
+/* Buttons */
+/* Carousel */
+
+/* LAYOUT */
+/* navigation global*/
+/* grid */
+/* header */
+/* footer */
+/* forms */
