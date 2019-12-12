@@ -23,13 +23,14 @@ nav {
 nav ul li a {
   color: #FFFFFF;
 }
-@media screen and (min-width: 1200px) {
-  nav ul li a {
-    background-color: #E6F8FC;
-  }
-}
 nav ul li a:hover {
   background-color: #5E78A6;
+}
+nav .menu {
+  color: #FFFFFF;
+}
+nav .navbar-toggle {
+  color: #FFFFFF;
 }
 
 .bar {
@@ -206,11 +207,6 @@ footer #hr-footer {
   color: #FFFFFF;
 }
 
-@media screen and (max-width: 768px) {
-  nav .navbar-toggle {
-    color: #FFFFFF;
-  }
-}
 /* Topography */
 nav ul {
   list-style-type: none;
@@ -218,6 +214,11 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  nav .main-nav {
+    list-style-type: none;
+  }
 }
 
 .bar {
@@ -235,11 +236,25 @@ nav ul li a {
 .carousel {
   align-items: center;
 }
+.carousel .slide img {
+  background-attachment: fixed;
+  background-position: center center;
+}
 .carousel .slide .carousel-text {
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .carousel .slide .carousel-text {
+    font-size: 0.8rem;
+  }
+}
 .carousel .slide .carousel-text p {
   font-size: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .carousel .slide .carousel-text p {
+    font-size: 1.3rem;
+  }
 }
 .carousel .triangle-container {
   justify-content: center;
@@ -247,6 +262,12 @@ nav ul li a {
 .carousel .triangle-container .triangle {
   text-align: center;
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .carousel .triangle-container .triangle {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 .creative {
@@ -295,9 +316,25 @@ nav ul li a {
   font-size: 20px;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .about-us .about-icons .about-box .title {
+    margin-left: -30px;
+  }
+}
 .about-us .about-icons .about-box .content {
   text-align: center;
   font-size: 15px;
+}
+@media screen and (max-width: 768px) {
+  .about-us .about-icons .about-box .content {
+    margin-left: 5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about-us .about-icons .about-box img {
+    width: 90px;
+    margin-left: -60px;
+  }
 }
 
 .galery .vertical-divider .item #title-gallery {
@@ -323,6 +360,11 @@ nav ul li a {
   text-align: justify;
 }
 
+@media screen and (min-width: 768px) {
+  .contact {
+    justify-content: space-between;
+  }
+}
 .contact .contact-one {
   text-align: center;
 }
@@ -352,6 +394,12 @@ nav ul li a {
 .contact .contact-two #phone {
   font-size: 1.8em;
 }
+@media screen and (max-width: 768px) {
+  .contact .contact-two {
+    padding-left: 200px;
+    text-align: center;
+  }
+}
 
 .footer-boxes {
   justify-content: space-around;
@@ -371,27 +419,14 @@ nav ul li a {
   text-align: center;
 }
 
-.footer ul {
+footer ul {
   list-style-type: none;
 }
-.footer ul li a {
+footer ul li a {
   text-decoration: none;
   text-align: center;
 }
-.footer #hr-footer {
-  color: #FFFFFF;
-}
 
-@media screen and (min-width: 768px) {
-  .contact {
-    justify-content: space-between;
-  }
-}
-@media screen and (max-width: 768px) {
-  nav ul .main-nav {
-    list-style-type: none;
-  }
-}
 /* Display */
 .wrapper {
   width: 100%;
@@ -399,8 +434,55 @@ nav ul li a {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 768px) {
+  nav .navbar-toggle {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav .navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  nav .menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav .menu {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav .main-nav {
+    display: none;
+  }
+}
+nav a {
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  nav a {
+    padding: 20px;
+  }
+}
 nav ul {
   padding: 0;
+}
+@media screen and (min-width: 768px) {
+  nav ul {
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) {
+  nav ul li {
+    flex: 1 1 0;
+  }
 }
 nav ul li a {
   display: block;
@@ -413,8 +495,18 @@ nav ul li a {
   padding: 20px;
   box-sizing: border-box;
 }
+@media screen and (max-width: 768px) {
+  .bar {
+    display: flex;
+  }
+}
 .bar .company-name {
   flex: 1;
+}
+@media screen and (max-width: 768px) {
+  .bar .company-name {
+    display: none;
+  }
 }
 .bar .search {
   flex: 1;
@@ -660,6 +752,11 @@ nav ul li a {
   padding: 10px;
   box-sizing: border-box;
 }
+@media screen and (min-width: 768px) {
+  .blocks-creative .grid-creative {
+    flex: 0 1 32%;
+  }
+}
 .blocks-creative #vertical-line {
   border-left: 3px solid;
   height: auto;
@@ -668,6 +765,12 @@ nav ul li a {
 .contact {
   display: flex;
   flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .contact .contact-one {
   flex-grow: 1;
@@ -706,8 +809,18 @@ nav ul li a {
   width: 66.3%;
   padding-left: 10px;
 }
+@media screen and (max-width: 768px) {
+  .contact .contact-one .form #first_name, .contact .contact-one .form #email {
+    width: 337px;
+  }
+}
 .contact .contact-one .form #msg {
   border: 2px solid;
+}
+@media screen and (max-width: 768px) {
+  .contact .contact-one .form #msg {
+    width: 343px;
+  }
 }
 .contact .contact-one .form #btn {
   height: 40px;
@@ -739,6 +852,14 @@ nav ul li a {
 .footer-boxes .footer-box {
   width: 15%;
 }
+@media screen and (max-width: 768px) {
+  .footer-boxes .footer-box {
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 10%;
+    width: auto;
+  }
+}
 .footer-boxes .footer-box .circle {
   border-radius: 100%;
   height: 100px;
@@ -768,7 +889,7 @@ nav ul li a {
   padding: 5px;
 }
 
-footer {
+footer ul {
   display: flex;
   padding: 0;
 }
@@ -779,27 +900,23 @@ footer ul li a {
   display: block;
   padding: 10px;
 }
-footer #hr-footer {
+footer ul #hr-footer {
   border-left: 1px solid;
   height: auto;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-/* ABSTRACTS */
-/* Colors */
-/* Variables */
-/* Mixins */
-/* Placeholder */
-/* BASE */
-/* Normalize */
-/* Typography margin/padding/float/align/justify-content/font/list-style-type/text-decoration/width/flex-direction/*/
-/* COMPONENTS */
-/* Buttons */
-/* Carousel */
-/* LAYOUT */
-/* navigation global*/
-/* grid */
-/* header */
-/* footer */
-/* forms */
+/* Animation */
+.carousel .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* Images */
+.about-us {
+  background-image: url(images/865b212199b6a0f01f81dffbbdb3a216.png);
+}
+.about-us .about-icons .about-box {
+  background-image: url(images/fe709a36e9e56334aa558385b0941f2c.png);
+}

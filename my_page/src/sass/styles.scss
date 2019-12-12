@@ -15,17 +15,16 @@ $color-secundary: #E6F8FC;
 $color-search: #DFE2EB;
 $color-search-hover: #E6E9F2;
 $color-carousel: #54535D;
-$small-width: 800px;
-$large-width: 1200px;
+$media-width: 768px;
 
 /* Mixin */
 @mixin wider-than($point) {
     @if $point == small {
-        @media screen and (min-width: $small-width) {
+        @media screen and (min-width: $media-width) {
             @content;
         }
     } @else if $point == large {
-          @media screen and (min-width: $large-width) {
+          @media screen and (max-width: $media-width) {
               @content;
           }
       }
@@ -46,14 +45,17 @@ nav {
         li {
             a{
                 color: $color-background;
-                @include wider-than(large) {
-                  background-color: $color-secundary;
-                }
                 &:hover {
                     background-color: $color-primary-hover;
                 }
             }
         }
+    }
+    .menu {
+        color: $color-background;
+    }
+    .navbar-toggle {
+        color: $color-background;
     }
 }
 
@@ -257,14 +259,6 @@ footer {
     }
 }
 
-@media screen and (max-width: 768px) {
-    nav {
-        .navbar-toggle {
-            color: $color-background;
-        }
-    }
-}
-
 /* Topography */
 nav {
     ul{
@@ -274,6 +268,11 @@ nav {
                 text-decoration: none;
                 text-align: center;
             }
+        }
+    }
+    .main-nav {
+        @include wider-than(large) {
+            list-style-type: none;
         }
     }
 }
@@ -295,10 +294,20 @@ nav {
 .carousel {
     align-items: center;
     .slide {
+        img {
+            background-attachment: fixed;
+            background-position: center center;
+        }
         .carousel-text {
             text-align: center;
+            @include wider-than(large) {
+                font-size: 0.8rem;
+            }
             p {
                 font-size: 2rem;
+                @include wider-than(large) {
+                    font-size: 1.3rem;
+                }
             }
         }
     }
@@ -307,6 +316,10 @@ nav {
         .triangle {
             text-align: center;
             cursor: pointer;
+            @include wider-than(large) {
+                width:  10px;
+                height: 10px;
+            }
 
         }
     }
@@ -355,10 +368,22 @@ nav {
             .title {
                 font-size: 20px;
                 text-align: center;
+                @include wider-than(large) {
+                    margin-left: -30px;
+                }
             }
             .content {
                 text-align: center;
                 font-size: 15px;
+                @include wider-than(large) {
+                    margin-left: 5px;
+                }
+            }
+            img {
+                @include wider-than(large) {
+                    width: 90px;
+                    margin-left: -60px;
+                }
             }
         }
     }
@@ -396,6 +421,9 @@ nav {
 }
 
 .contact {
+    @include wider-than(small) {
+        justify-content: space-between;
+    }
     .contact-one {
         text-align: center;
         .form {
@@ -428,6 +456,10 @@ nav {
         #phone {
             font-size: 1.8em;
         }
+        @include wider-than(large) {
+            padding-left: 200px;
+            text-align: center;
+        }
     }
 }
 
@@ -451,7 +483,7 @@ nav {
     }
 }
 
-.footer {
+footer {
     ul {
         list-style-type: none;
         li {
@@ -461,25 +493,6 @@ nav {
             }
         }
     }
-    #hr-footer {
-        color: $color-background;
-    }
-}
-
-@media screen and (min-width: 768px) {
-.contact {
-    justify-content: space-between;
-}
-}
-
-@media screen and (max-width: 768px) {
-nav {
-    ul{
-        .main-nav{
-            list-style-type: none;
-        }
-    }
-}
 }
 
 /* Display */
@@ -490,9 +503,46 @@ nav {
 }
 
 nav {
+    .navbar-toggle {
+        @include wider-than(small) {
+            display: none;
+        }
+        @include wider-than(large) {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+    }
+    .menu {
+        @include wider-than(small) {
+            display: none;
+        }
+        @include wider-than(large) {
+            display: inline-block;
+        }
+    }
+    .main-nav {
+        @include wider-than(large) {
+            display: none;
+        }
+    }
+    a {
+        text-decoration: none;
+        @include wider-than(large) {
+            padding: 20px;
+          }
+    }
     ul{
+        @include wider-than(small) {
+            display: flex;
+        }
         padding: 0;
         li {
+            @include wider-than(small) {
+                flex: 1 1 0;
+            }
             a{
                 display: block;
                 padding: 20px;
@@ -506,8 +556,14 @@ nav {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
+    @include wider-than(large) {
+        display: flex;
+    }
     .company-name {
         flex: 1;
+        @include wider-than(large) {
+            display: none;
+        }
     }
     .search {
         flex: 1;
@@ -750,6 +806,9 @@ nav {
     padding-top: 30px;
     padding-bottom: 30px;
     .grid-creative {
+        @include wider-than(small) {
+            flex: 0 1 32%;
+        }
         margin-bottom: 20px;
         padding:10px;
         box-sizing: border-box;
@@ -761,6 +820,10 @@ nav {
 }
 
 .contact {
+    @include wider-than(small) {
+        display:flex;
+        flex-wrap:wrap;
+    }
     display:flex;
     flex-wrap: wrap;
     .contact-one {
@@ -797,9 +860,15 @@ nav {
                 border: 2px solid;
                 width:66.3%;
                 padding-left: 10px;
+                @include wider-than(large) {
+                    width: 337px;
+                }
             }
             #msg {
                 border: 2px solid;
+                @include wider-than(large) {
+                    width: 343px;
+                }
             }
             #btn {
                 height: 40px;
@@ -832,6 +901,12 @@ nav {
     width: 100%;
     .footer-box {
         width:15%;
+        @include wider-than(large) {
+            margin-left: 35%;
+            margin-right: 35%;
+            margin-top: 10%;
+            width:auto;
+        }
         .circle {
             border-radius: 100%;
             height: 100px;
@@ -864,9 +939,9 @@ nav {
 }
 
 footer {
-    display: flex;
-    padding: 0;
     ul {
+        display: flex;
+        padding: 0;
         li {
             flex: 1 1 0;
             a {
@@ -874,45 +949,29 @@ footer {
                 padding: 10px;
             }
         }
-    }
-    #hr-footer {
-        border-left: 1px solid;
-        height: auto;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        #hr-footer {
+            border-left: 1px solid;
+            height: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
     }
 }
 
+/* Animation */
+.carousel {
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* ABSTRACTS */
-/* Colors */
-/* Variables */
-/* Mixins */
-/* Placeholder */
-
-/* BASE */
-/* Normalize */
-/* Typography margin/padding/float/align/justify-content/font/list-style-type/text-decoration/width/flex-direction/*/
-
-/* COMPONENTS */
-/* Buttons */
-/* Carousel */
-
-/* LAYOUT */
-/* navigation global*/
-/* grid */
-/* header */
-/* footer */
-/* forms */
+/* Images */
+.about-us {
+    background-image: url('../images/about3.png');
+    .about-icons {
+        .about-box {
+            background-image: url('../images/about2.png');
+        }
+    }
+}
